@@ -8,7 +8,7 @@ PHONE_ID = os.environ["PHONE_NUMBER_ID"]
 VERIFY = os.environ["VERIFY_TOKEN"]
 API = f"https://graph.facebook.com/v21.0/{PHONE_ID}"
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
-URL_RE = re.compile(r"https?://(?:www\.)?(?:x|twitter)\.com/\S+/status/\d+\S*")
+URL_RE = re.compile(r"https?://\S+")
 MAX_BYTES = 500 * 1024
 # (fps, quality, max seconds), tried in order until the file fits
 ATTEMPTS = [(15, 50, 8), (12, 40, 8), (10, 30, 6), (8, 20, 5), (6, 15, 4)]
